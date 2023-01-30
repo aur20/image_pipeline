@@ -149,7 +149,7 @@ namespace depth_image_proc {
 		// Initialize timer and static point cloud
 		float frequency = 15.0;
 		private_nh.getParam("frequency", frequency);
-		timer = nh.createTimer(ros::Duration(1./frequency), &PointCloudXyzNodelet::timerCb, this);
+		timer = nh.createTimer(ros::Duration(1./frequency), &PointCloudXyzRadialNodelet::timerCb, this);
 		cloud_msg = PointCloud::Ptr(&s_cloud_msg, boost::null_deleter());
 	}
 
