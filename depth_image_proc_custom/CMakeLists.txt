@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(depth_image_proc)
+project(depth_image_proc_custom)
 
 find_package(catkin REQUIRED
   cmake_modules
