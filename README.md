@@ -1,3 +1,5 @@
+**[Custom Mod]**: Allows depth_image_proc to take pictures from AirSim with an undefined frequency and output them with a frequency assigned by argument *"output_freq"*. Only implemented for my needs in ```point_cloud_xyz.cpp``` and ```point_cloud_xyz_radial.cpp```.
+
 image_pipeline
 ==============
 
