@@ -177,9 +177,11 @@ namespace depth_image_proc {
     {
 		// Only publish valid messages
 		if(!depth_msg->header.frame_id.empty())
-		timer.start();
-		else
-		timer.stop();
+			timer.start();
+		else{
+			//timer.stop();
+			return;
+		}
 		cloud_msg->header = depth_msg->header;
 		cloud_msg->height = depth_msg->height;
 		cloud_msg->width  = depth_msg->width;
@@ -215,7 +217,6 @@ namespace depth_image_proc {
     }
 
 	void PointCloudXyzRadialNodelet::timerCb(const ros::TimerEvent& e){
-		s_cloud_msg.header.stamp = e.current_real;
 		pub_point_cloud_.publish (cloud_msg);
 	}
 
